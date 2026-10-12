@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b2c">
+  <title>DisasterAssist | Emergency Response Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/extra.css">
+</head>
+<body><div class="shell">
+  <aside class="sidebar">
+    <a class="brand" href="#"><span class="brand-mark">✳</span><span>Disaster<span class="brand-light">Assist</span><small>RESPONSE NETWORK</small></span></a>
+    <div class="nav-label">WORKSPACE</div><a class="nav-item active" href="#overview"><span>▦</span> Overview</a>
+    <a class="nav-item" href="#report"><span>＋</span> Report incident</a><a class="nav-item" href="#incidents"><span>◷</span> Incident feed</a>
+    <div class="sidebar-bottom"><div class="status-dot"></div><span>System operational</span><small>Local demo environment</small></div>
+  </aside>
+  <main class="main"><header class="topbar"><div class="mobile-brand">✳ DisasterAssist</div><div class="crumb">Workspace <span>/</span> Overview</div><div class="top-right"><span class="live"><i></i> LIVE DASHBOARD</span><div class="avatar">DR</div></div></header>
+    <div class="content">
+      <section class="hero" id="overview"><div><div class="eyebrow"><span class="spark">✳</span> COMMUNITY RESPONSE NETWORK</div><h1>When every second<br>matters, <em>we're ready.</em></h1><p>Report a situation, get an AI-assisted assessment, and help your community respond faster.</p><a class="hero-cta" href="#report">Report an emergency <span>↗</span></a></div>
+        <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="radar"><span class="radar-cross">＋</span><span class="radar-dot d1"></span><span class="radar-dot d2"></span><span class="radar-dot d3"></span><span class="radar-sweep"></span></div><div class="signal-card"><span class="signal-pulse"></span> Monitoring area <b>Active</b></div><div class="map-label">RESPONSE GRID <span>● CONNECTED</span></div></div><div class="hero-wave"></div>
+      </section>
+      <section class="stats-grid" aria-label="Incident statistics">
+        <article class="stat-card"><div class="stat-top"><span>REPORTED INCIDENTS</span><span class="stat-icon blue">▤</span></div><strong id="stat-total">0</strong><div class="stat-foot">All community reports</div></article>
+        <article class="stat-card"><div class="stat-top"><span>HIGH PRIORITY</span><span class="stat-icon red">⌁</span></div><strong id="stat-high">0</strong><div class="stat-foot red-text">Needs attention</div></article>
+        <article class="stat-card"><div class="stat-top"><span>HAZARD TYPES</span><span class="stat-icon amber">⌖</span></div><strong id="stat-types">0</strong><div class="stat-foot">Identified in reports</div></article>
+        <article class="stat-card"><div class="stat-top"><span>RESPONSE STATUS</span><span class="stat-icon green">✓</span></div><strong class="available">Ready</strong><div class="stat-foot green-text"><i></i> API connected</div></article>
+      </section>
+      <div class="section-heading" id="report"><div><div class="eyebrow dark-eyebrow">TAKE ACTION</div><h2>Report a situation</h2><p>Share what is happening so responders can understand the situation.</p></div><span class="secure-tag">⌑ &nbsp; Community report</span></div>
+      <section class="report-layout">
+        <form id="report-form" class="report-card"><div class="form-header"><div class="form-icon">＋</div><div><h3>New incident report</h3><p>Fields marked <b>*</b> are required</p></div><span class="step-label">01 / REPORT</span></div>
+          <label for="description">What is happening? <b>*</b></label><textarea id="description" rows="4" minlength="5" required placeholder="Describe what you can see. For example: Water is rising quickly near the bridge and two people are trapped..."></textarea>
+          <div class="field-hint">Be specific. Mention visible hazards, affected people, and immediate risks.</div>
+          <div class="form-row"><div><label for="location">Location <b>*</b></label><input id="location" required minlength="2" placeholder="Street, neighborhood, or landmark"></div><div><label for="contact">Contact (optional)</label><input id="contact" placeholder="Phone or email"></div></div>
+          <div class="form-actions"><span class="privacy-note">Your report is stored on this demo server.</span><button class="submit-btn" type="submit">Analyze &amp; submit <span>→</span></button></div><div id="form-message" class="form-message" role="status"></div>
+        </form>
+        <aside class="side-column"><article class="analysis-card"><div class="analysis-head"><span class="ai-mark">✳</span><div><h3>AI-assisted analysis</h3><p>Situation assessment</p></div><span class="beta">DEMO</span></div>
+          <div id="analysis-empty" class="analysis-empty"><span class="scan-icon">⌁</span><b>Ready to assess</b><span>Submit a report to see a hazard classification and urgency estimate.</span></div><div id="analysis-result" class="analysis-result hidden"></div></article>
+          <article class="help-card"><div class="help-icon">!</div><div><h3>In immediate danger?</h3><p>This demo does not contact emergency services. Call your local emergency number now.</p></div></article>
+        </aside>
+      </section>
+      <section class="incidents-section" id="incidents"><div class="section-heading compact"><div><div class="eyebrow dark-eyebrow">COMMUNITY ACTIVITY</div><h2>Recent incidents</h2></div><span class="feed-count" id="feed-count">0 reports</span></div><div id="incident-list" class="incident-list"><div class="empty-feed"><span>◷</span><b>No reports yet</b><small>New community reports will appear here.</small></div></div></section>
+      <footer>DisasterAssist <span>•</span> Educational prototype <span class="footer-right">Built for faster community awareness</span></footer>
+    </div>
+  </main>
+</div><script src="/app.js"></script></body></html>
+ 
